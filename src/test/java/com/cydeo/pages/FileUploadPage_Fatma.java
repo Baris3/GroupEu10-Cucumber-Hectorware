@@ -24,6 +24,8 @@ public class FileUploadPage_Fatma {
     @FindBy(xpath = "//table[@id='filestable']/tbody/tr[11]/td[2]/a/span/span[1]")
     public WebElement file;
 
-    public String fileDirection = "/Users/fatmakayhan/Desktop/Day13Notes.docx";
+    public String fileDirection="/Users/fatmakayhan/IdeaProjects/GroupEu10-Cucumber-Hectorware/src/test/resources/filesToUpload/Day13Notes.docx";
+
+   // public String fileDirection = "/Users/fatmakayhan/Desktop/Day13Notes.docx";
 
 }
