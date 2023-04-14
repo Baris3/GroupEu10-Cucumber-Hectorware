@@ -14,3 +14,9 @@ Feature: Default
 		And     Enter valid DB password in password field
 		And     Click on Sign in button
 		Then    Verify the library2 main page
+
+
+	Scenario: Users should be able to login to DB as librarian, or as a student
+		Given 	Navigate to DB URL
+		And 	User should be able to login to DB as a "library"
+		Then    Verify the library2 main page

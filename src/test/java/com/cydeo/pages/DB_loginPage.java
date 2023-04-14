@@ -20,5 +20,11 @@ public class DB_loginPage {
     @FindBy (xpath = "//*[@id=\"login-form\"]/button")
     public WebElement signIn;
 
+    public void login(String username, String password) {
+        this.username.sendKeys(username);
+        this.password.sendKeys(password);
+        signIn.click();
+    }
+
 
 }
