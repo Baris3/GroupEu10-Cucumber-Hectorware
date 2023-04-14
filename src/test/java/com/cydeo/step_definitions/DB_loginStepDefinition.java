@@ -3,6 +3,7 @@ package com.cydeo.step_definitions;
 import com.cydeo.pages.DB_loginPage;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
+import com.cydeo.utilities.LibraryDB;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -54,6 +55,24 @@ public class DB_loginStepDefinition {
     }
 
 
+    @Given("User should be able to login to DB as a {string}")
+    public void user_should_be_able_to_login_to_db_as_a(String user) throws Exception {
+
+        String username = null, password = null;
+        switch (user.toLowerCase()) {
+            case LibraryDB.LIBRARIAN:
+                username = ConfigurationReader.get("userNameLibrarian");
+                password = ConfigurationReader.get("passwordLibrarian");
+                break;
+            case LibraryDB.STUDENT:
+                username = ConfigurationReader.get("userNameStudent");
+                password = ConfigurationReader.get("passwordStudent");
+                break;
+            default:
+                throw new Exception("Wrong user type is provided: "+user);
+        }
+        DB_loginPage.login(username, password);
+    }
 
 
 }
