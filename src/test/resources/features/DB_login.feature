@@ -18,5 +18,5 @@ Feature: Default
 
 	Scenario: Users should be able to login to DB as librarian, or as a student
 		Given 	Navigate to DB URL
-		And 	User should be able to login to DB as a "library"
+		And 	User should be able to login to DB as a "librarian"
 		Then    Verify the library2 main page
