@@ -30,7 +30,7 @@ public class DB_UsersPage extends DB_PagesBase {
     public List<WebElement> columnNames;
 
     @FindBy(css = "a.btn-lg")
-    public WebElement addUsers;
+    public WebElement addUser;
 
     @FindBy(name = "full_name")
     public WebElement fullName;
